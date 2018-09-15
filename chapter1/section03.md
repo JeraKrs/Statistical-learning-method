@@ -78,5 +78,23 @@ $$
 
 例如极大似然估计（maximum likelihood estimation）。但这种策略在样本容量很小时，往往会出现过拟合（over-fitting）的现象。
 
-结构化最小化（structural risk minimization，SRM）：为了防止过拟合的策略，它等价于正则化（regularization），在
+结构化最小化（structural risk minimization，SRM）：为了防止过拟合的策略，它等价于正则化（regularization），在经验风险上加上表示模型复杂度的正则化项（regularizer）或罚项（penalty term）
+
+$$
+R_{srm}(f) = \frac{1}{N}\sum^{N}_{i=1}L(y_i, f(x_i)) + \lambda J(f)
+$$
+
+其中 $$J(f)$$ 表示模型的复杂度， $$\lambda \geq 0$$ 为系数，用以权衡经验风险和模型复杂度。
+
+例如贝叶斯估计的最大后验概率估计（maximum posterior probability estimation，MAP）。
+
+结构风险最小化认为结构风险最小的模型是最优模型：
+
+$$
+\underset{f \in \mathcal{F}}{min} \frac{1}{N} \sum^{N}_{i=1} L(y_i, f(x_i)) + \lambda J(f)
+$$
+
+#### 1.3.3 算法
+
+算法是指学习模型的具体方法，基于训练数据集，更具学习策略，从假设空间中选择最优模型。
 
