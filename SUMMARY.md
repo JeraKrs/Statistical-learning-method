@@ -12,4 +12,7 @@
 * [1.6 泛化能力](chapter1/section06.md)
 * [1.7 生成模型与判别模型](chapter1/section07.md)
 * [1.8 分类问题](chapter1/section08.md)
+* [1.9 标注问题](chapter1/section09.md)
+* [1.10 回归问题](chapter1/section10.md)
+* [1.11 习题](chapter1/section11.md)
 
