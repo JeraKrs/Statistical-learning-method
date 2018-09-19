@@ -16,3 +16,9 @@
 * [1.10 回归问题](chapter1/section10.md)
 * [1.11 习题](chapter1/section11.md)
 
+## 第二章 感知机
+
+* [2.1 感知机模型](chapter02/section01.md)
+* [2.2 感知机学习策略](chapter02/section02.md)
+* [2.3 感知机学习的算法](chapter02/section03.md)
+

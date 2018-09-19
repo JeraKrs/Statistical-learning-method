@@ -14,7 +14,9 @@ $$
 
 泛化能力的分析是通过研究泛化误差的概率上界来进行的，即泛化误差上界（generalization error bound）
 
-**定理：对二类分类，当假定空间** $$\mathcal{F}\{f_1, f_2, \dots, f_d\}$$**，对任意一个函数** $$f \in \mathcal{F}$$ **至少以概率** $$1 - \delta $$ **一下不等式成立。**
+**定理-1.1（泛化误差上界）**
+
+对二类分类，当假定空间 ****$$\mathcal{F}\{f_1, f_2, \dots, f_d\}$$，对任意一个函数 ****$$f \in \mathcal{F}$$ ****至少以概率 $$1 - \delta $$ ****以下不等式成立。
 
 $$
 R(f) \leq \hat{R}(f) + \varepsilon (d, N, \delta)
