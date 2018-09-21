@@ -21,4 +21,5 @@
 * [2.1 感知机模型](chapter02/section01.md)
 * [2.2 感知机学习策略](chapter02/section02.md)
 * [2.3 感知机学习的算法](chapter02/section03.md)
+* [2.4 习题](chapter02/section04.md)
 
