@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Hi](README.md)
+* [介绍](README.md)
 
 ## 第一章 统计学习方法概论
 
