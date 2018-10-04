@@ -29,3 +29,8 @@
 * [3.2 k近邻模型](chapter03/section02.md)
 * [3.3 k近邻法的实现](chapter03/section03.md)
 
+## 第四章 朴素贝叶斯法
+
+* [4.1 朴素贝叶斯法的学习与分类](chapter04/section01.md)
+* [4.2 朴素贝叶斯法的参数估计](chapter04/section02.md)
+
