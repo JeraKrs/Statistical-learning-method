@@ -40,4 +40,5 @@
 * [5.2 特征选择](chapter05/section02.md)
 * [5.3 决策树的生成](chapter05/section03.md)
 * [5.4 决策树的剪枝](chapter05/section04.md)
+* [5.5 CART算法](chapter05/section05.md)
 
