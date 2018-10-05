@@ -34,3 +34,10 @@
 * [4.1 朴素贝叶斯法的学习与分类](chapter04/section01.md)
 * [4.2 朴素贝叶斯法的参数估计](chapter04/section02.md)
 
+## 第五章 决策树
+
+* [5.1 决策树模型与学习](chapter05/section01.md)
+* [5.2 特征选择](chapter05/section02.md)
+* [5.3 决策树的生成](chapter05/section03.md)
+* [5.4 决策树的剪枝](chapter05/section04.md)
+
