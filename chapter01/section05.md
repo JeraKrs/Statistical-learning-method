@@ -2,13 +2,21 @@
 
 #### 1.5.1 正则化
 
-模型选择的典型方法是正则化（regularization），它是结构风险最小化策略的实现，是在经验风险上加一个正则化项（regularizer）或罚项（penalty term）。
+模型选择的典型方法是**正则化（regularization）**，它是结构风险最小化策略的实现，是在经验风险上加一个正则化项（regularizer）或罚项（penalty term）。正则化项一般是模型复杂度的单调递增函数，模型越复杂，正则化项值越大。
+
+正则化项一般具有如下形式：
+
+$$
+\underset{f\in\mathcal{F}}{min}\frac{1}{N}\sum^N_{i=1}L(y_i, f(x_i)) + \lambda J(f)
+$$
+
+其中第一项是经验风险，第二项式正则化项， $$\lambda \geq 0$$ 为调整两者之间关系的系数。
 
 正则化的目的是选择经验风险与模型复杂度同时较小的模型。
 
 #### 1.5.2 交叉验证
 
-将数据集切分成三部分：训练集（training set），验证集（validation set）和测试集（test set）。
+将数据集切分成三部分：训练集（training set），验证集（validation set）和测试集（test set）。训练集用来训练模型，验证集用于模型的选择，测试集用于最终对学习方法的评估。
 
 * 简单交叉验证：
   * 将数据随机分为两部分（训练集和测试集）
