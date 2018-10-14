@@ -1,18 +1,12 @@
 # 1.3 统计学习三要素
 
-方法=模型+策略+算法
+统计学习方法都是由模型、策略和算法构成的，即方法=模型+策略+算法。
 
 #### 1.3.1 模型
 
-模型是所要学习的条件概率分布或决策函数。
+在监督学习过程中，模型是所要学习的条件概率分布或决策函数。模型的假设空间（hypothesis space）包含所有可能的条件概率分布或决策函数。
 
-模型的假设空间（hypothesis space）包含所有可能的条件概率分布或决策函数。
-
-$$
-\mathcal{F} = \{ f | Y = f(X)\}
-$$
-
-其中 $$X, Y$$ 分别为输入和输出空间上的变量， $$\mathcal{F}$$ 通常是由一个参数向量决定的函数族，可表示为：
+假设空间用 $$\mathcal{F}$$ 表示，有 $$\mathcal{F} = \{ f | Y = f(X)\}$$ ，其中 $$X, Y$$ 分别为输入和输出空间上的变量， $$\mathcal{F}$$ 通常是由一个参数向量决定的函数族，可表示为：
 
 $$
 \mathcal{F} = \{ f | Y = f_{\theta}(X), \theta \in R^n\}
@@ -22,45 +16,24 @@ $$
 
 #### 1.3.2 策略
 
-**损失函数和风险函数**
+**损失函数和代价函数**
 
-对于给定的输入 $$x$$ ，由 $$f(x)$$ 给出相应的 $$y$$ ，这个输出的预测值 $$f(x)$$ 与真实值 $$y$$ 可能不一致。
+对于给定的输入 $$X$$ ，由 $$f(X)$$ 给出相应的 $$Y$$ ，这个输出的预测值 $$f(X)$$ 与真实值 $$Y$$ 可能不一致。**损失函数（loss function）或代价函数（cost function）**来度量预测错误的程度，它是 $$f(X)$$ 和 $$Y$$ 的非负实值函数 $$L(Y, f(X))$$ 。统计学习常用的损失函数有以下几种：
 
-损失函数（loss function）或代价函数（cost function）来度量预测错误的程度，它是 $$f(X)$$ 和 $$Y$$ 的非负实值函数 $$L(Y, f(X))$$ 。
+* 0-1损失函数（0-1 loss function）： $$L(Y, f(X)) = \left\{\begin{matrix} 1 & f(x) \neq y \\  0 & f(x) = y \end{matrix}\right.$$ 
+* 平方损失函数（quadratic loss function）： $$L(Y, f(X)) = (y - f(x))^2$$ 
+* 绝对损失函数（absolute loss function）： $$L(Y | f(X)) = | y - f(x)|$$ 
+* 对数损失函数（logarithmic loss function）或对数似然损失函数（loglikelihood loss function）： $$L(Y, P(Y|X)) = -\log P(y|x)$$ 
 
-* 0-1损失函数（0-1 loss function）：
-
-$$
-L(Y, f(X)) = \left\{\begin{matrix} 1 & f(x) \neq y \\  0 & f(x) = y \end{matrix}\right.
-$$
-
-* 平方损失函数（quadratic loss function）：
-
-$$
-L(Y, f(X)) = (y - f(x))^2
-$$
-
-* 绝对损失函数（absolute loss function）：
-
-$$
-L(Y | f(X)) = | y - f(x)|
-$$
-
-* 对数损失函数（logarithmic loss function）或对数似然损失函数（loglikelihood loss function）：
-
-$$
-L(Y, P(Y|X)) = -\log P(y|x)
-$$
-
-损失函数值越小，模型越好。因为假定 $$X, Y$$ 服从联合概率分布 $$P(X, Y)$$，损失函数的期望为
+损失函数值越小，模型越好。因为假定 $$X, Y$$ 服从联合概率分布 $$P(X, Y)$$，所以损失函数的期望为
 
 $$
 R_{exp}(f) = E_{P}[ L(Y, f(X)] = \int_{\mathcal{X} \times \mathcal{Y}} L(y, f(x))P(x, y)dxdy
 $$
 
-这是理论上模型 $$f(x)$$ 关于联合分布 $$P(X, Y)$$ 的平均意义下的损失，称为风险函数（risk function）或期望损失（expected loss）。统计学习方法的目标就是选择期望风险最小的模型。
+这是理论上模型 $$f(X)$$ 关于联合分布 $$P(X, Y)$$ 的平均意义下的损失，称为**风险函数（risk function）或期望损失（expected loss）**。统计学习方法的目标就是选择期望风险最小的模型。
 
-由于 $$P(Y|X)$$ 未知（如果已知联合概率分布的话，就无需学习），所以需要通过经验风险（empirical risk）或经验损失（empirical loss）来评估模型：
+由于 $$P(Y|X)$$ 未知（如果已知联合概率分布的话，就无需学习），所以需要通过**经验风险（empirical risk）或经验损失（empirical loss）**来评估模型：
 
 $$
 R_{emp}(f) = \frac{1}{N} \sum^N_{i=1} L(y_i, f(x_i))
