@@ -1,6 +1,6 @@
 # 1.7 生成模型与判别模型
 
-监督学习方法分为生成方法（generative approach）和判别方法（discriminative approach），对应的模型分为生成模型（generative model）和判别模型（discriminative model）。
+监督学习方法分为**生成方法（generative approach）**和**判别方法（discriminative approach）**，对应的模型分为**生成模型（generative model）**和**判别模型（discriminative model）**。
 
 生成方法通过数据来学习联合概率分布 $$P(X, Y)$$ ，然后求出条件概率分布 $$P(Y|X) = \frac{P(X, Y)}{P(X)}$$ ，这种方法有朴素贝叶斯法和隐马尔可夫模型等。
 
