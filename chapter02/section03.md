@@ -9,7 +9,7 @@
 
 注：不是一次使用 $$M$$ 中所有的误分类点，而是一次随机选取一个误分类点。
 
-假设五分类点集固定，那么损失函数 $$L(w, b)$$的梯度有 $$\bigtriangledown_{w} L(w, b) = - \sum_{x_0 \in M} y_ix_i, \bigtriangledown_{b} = -\sum_{x_i \in M}y_i$$，每次随机选取一个误分类点 $$(x_i, y_i)$$对 $$w, b$$进行更新 $$w \leftarrow w + \eta y_i x_i, b \leftarrow b + \eta y_i$$,其中 $$\eta$$ 为步长（$$0 < \eta \leq 1$$），也称学习率（learning rate）。
+假设误分类点集固定，那么损失函数 $$L(w, b)$$的梯度有 $$\bigtriangledown_{w} L(w, b) = - \sum_{x_0 \in M} y_ix_i, \bigtriangledown_{b} = -\sum_{x_i \in M}y_i$$，每次随机选取一个误分类点 $$(x_i, y_i)$$对 $$w, b$$进行更新 $$w \leftarrow w + \eta y_i x_i, b \leftarrow b + \eta y_i$$,其中 $$\eta$$ 为步长（$$0 < \eta \leq 1$$），也称学习率（learning rate）。
 
 **算法-2.1 （感知机学习算法的原始形式）**
 
@@ -24,7 +24,7 @@
 
 #### 2.3.2 算法的收敛性
 
-令 $$\hat{w} = (w^T, b)^T, \hat{x} = (x^T, 1)^T$$ 
+为了便于叙述与推导，令 $$\hat{w} = (w^T, b)^T, \hat{x} = (x^T, 1)^T$$ 。
 
 **定理-2.1（Novikoff）**
 
