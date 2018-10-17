@@ -4,7 +4,7 @@ k近邻法（k-nearest neighbour, KNN）是一种基本分类与回归方法。
 
 **算法3-1 （k近邻法）**
 
-输入： $$T = \{ (x_1, y_1), (x_2, y_2), \dots, (x_n, y_n)\}$$ ，其中 $$x_i \in \mathcal{X} = R^n, y_i \in \mathcal{Y} = \{c_1, c_2, \dots, c_k\}$$ ；实例 $$x$$ 。
+输入： $$T = \{ (x_1, y_1), (x_2, y_2), \dots, (x_n, y_n)\}$$ ，其中 $$x_i \in \mathcal{X} = R^n, y_i \in \mathcal{Y} = \{c_1, \dots, c_k\}$$ ；实例 $$x$$ 。
 
 输出：实例 $$x$$ 所属的类别 $$y$$ 。
 
