@@ -33,6 +33,7 @@
 
 * [4.1 朴素贝叶斯法的学习与分类](chapter04/section01.md)
 * [4.2 朴素贝叶斯法的参数估计](chapter04/section02.md)
+* [4.3 习题](chapter04/section03.md)
 
 ## 第五章 决策树
 
