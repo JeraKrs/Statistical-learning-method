@@ -1,6 +1,6 @@
 # Table of contents
 
-* [介绍](README.md)
+* [统计学习方法阅读笔记](README.md)
 
 ## 第一章 统计学习方法概论
 
@@ -28,6 +28,7 @@
 * [3.1 k近邻法](chapter03/section01.md)
 * [3.2 k近邻模型](chapter03/section02.md)
 * [3.3 k近邻法的实现](chapter03/section03.md)
+* [3.4 习题](chapter03/section04.md)
 
 ## 第四章 朴素贝叶斯法
 
@@ -42,5 +43,5 @@
 * [5.3 决策树的生成](chapter05/section03.md)
 * [5.4 决策树的剪枝](chapter05/section04.md)
 * [5.5 CART算法](chapter05/section05.md)
-* [5.6 习题](chapter05/5.6-xi-ti.md)
+* [5.6 习题](chapter05/section06.md)
 
